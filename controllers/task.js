@@ -5,7 +5,7 @@ const ErrorResponse = require("../utils/errorResponse")
 
 const getAllTasks = async (req, res, next) =>{
     try{
-        const allTasks = await Task.find({})
+        const allTasks =  await Task.find({})
         res.status(200).json({allTasks})
     }catch(err){
         next(err)
